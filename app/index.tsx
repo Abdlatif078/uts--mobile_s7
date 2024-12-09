@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 
@@ -32,7 +33,11 @@ const App = () => {
             secureTextEntry
           />
 
-          <TouchableOpacity style={styles.button} onPress={handleLogin}>
+          <TouchableOpacity
+          onPress={() => {
+            router.push("/menu")
+          }}
+          style={styles.button}>
             <Text style={styles.buttonText}>Masuk</Text>
           </TouchableOpacity>
 
